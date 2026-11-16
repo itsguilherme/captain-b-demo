@@ -167,24 +167,51 @@
     dd.addEventListener("focusout", function (e) { if (!dd.contains(e.relatedTarget)) set(false); });
   });
 
-  /* ---- auto carousel ---- */
+  /* ---- auto carousel: keeps moving on its own, swipe on phones, pause button ---- */
   document.querySelectorAll("[data-carousel]").forEach(function (c) {
     var slides = c.querySelectorAll("img[data-slide]");
     var dots = c.querySelectorAll("[data-go]");
-    var i = 0, timer = null;
+    var pauseBtn = c.querySelector("[data-pause]");
+    var frame = c.querySelector(".carousel__frame") || c;
+    var MS = 3200;
+    var i = 0, timer = null, userPaused = false, focusHold = false, onScreen = true;
     var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) userPaused = true;
     function go(n) {
       i = (n + slides.length) % slides.length;
-      slides.forEach(function (s, k) { s.dataset.active = k === i ? "true" : "false"; if (k === (i + 1) % slides.length) s.loading = "eager"; });
+      slides.forEach(function (s, k) {
+        s.dataset.active = k === i ? "true" : "false";
+        if (k === (i + 1) % slides.length && s.loading === "lazy") s.loading = "eager"; // preload the next photo
+      });
       dots.forEach(function (d, k) { if (k === i) d.setAttribute("aria-current", "true"); else d.removeAttribute("aria-current"); });
+      // restart the progress bar on the active thumbnail
+      c.dataset.running = "false"; void c.offsetWidth; sync();
     }
-    function start() { if (!reduce && !timer) timer = setInterval(function () { go(i + 1); }, 4200); }
-    function stop() { clearInterval(timer); timer = null; }
-    dots.forEach(function (d) { d.addEventListener("click", function () { stop(); go(+d.dataset.go); start(); }); });
-    c.addEventListener("mouseenter", stop); c.addEventListener("mouseleave", start);
-    c.addEventListener("focusin", stop); c.addEventListener("focusout", start);
-    document.addEventListener("visibilitychange", function () { if (document.hidden) stop(); else start(); });
-    start();
+    function sync() {
+      var run = !userPaused && !focusHold && onScreen && !document.hidden;
+      c.dataset.running = run ? "true" : "false";
+      c.dataset.paused = userPaused ? "true" : "false";
+      if (pauseBtn) pauseBtn.setAttribute("aria-label", userPaused ? pauseBtn.dataset.labelPlay : pauseBtn.dataset.labelPause);
+      clearInterval(timer); timer = null;
+      if (run) timer = setInterval(function () { go(i + 1); }, MS);
+    }
+    dots.forEach(function (d) { d.addEventListener("click", function () { go(+d.dataset.go); }); });
+    if (pauseBtn) pauseBtn.addEventListener("click", function () { userPaused = !userPaused; sync(); });
+    // keyboard users: hold still while focus is inside (WCAG 2.2.2)
+    c.addEventListener("focusin", function (e) { if (e.target.matches(":focus-visible")) { focusHold = true; sync(); } });
+    c.addEventListener("focusout", function (e) { if (!c.contains(e.relatedTarget)) { focusHold = false; sync(); } });
+    document.addEventListener("visibilitychange", sync);
+    if ("IntersectionObserver" in window) new IntersectionObserver(function (e) { onScreen = e[0].isIntersecting; sync(); }, { threshold: 0.2 }).observe(c);
+    // swipe
+    var x0 = null, y0 = null;
+    frame.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, { passive: true });
+    frame.addEventListener("touchend", function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) go(i + (dx < 0 ? 1 : -1));
+      x0 = null;
+    }, { passive: true });
+    go(0);
   });
 
   /* ---- WhatsApp click tracking ---- */
