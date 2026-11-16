@@ -128,15 +128,16 @@
       }
       var btn = form.querySelector('button[type="submit"]');
       btn.setAttribute("aria-busy", "true");
-      btn.textContent = "Sending your request";
-      track("generate_lead", { project_type: data.get("project_type"), form: form.dataset.formName || "estimate" });
+      var label = btn.textContent;
+      btn.textContent = btn.dataset.sending || "Sending your request";
+      track("generate_lead", { project_type: data.get("project_type"), form: form.dataset.formName || "estimate", language: document.documentElement.lang });
       var thanks = form.getAttribute("action") || "thank-you/";
       if (!FORM_ENDPOINT) { window.location.href = thanks; return; } // demo mode: nothing is sent anywhere
       fetch(FORM_ENDPOINT, { method: "POST", body: data })
         .then(function (r) { if (!r.ok) throw new Error(r.status); window.location.href = thanks; })
         .catch(function () {
           btn.removeAttribute("aria-busy");
-          btn.textContent = "Get my free estimate";
+          btn.textContent = label;
           var fail = form.querySelector("[data-send-error]");
           if (fail) fail.hidden = false;
         });

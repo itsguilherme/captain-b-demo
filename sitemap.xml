@@ -1,14 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://capitainb.com/</loc></url>
-  <url><loc>https://capitainb.com/pool-enclosures/</loc></url>
-  <url><loc>https://capitainb.com/lanais/</loc></url>
-  <url><loc>https://capitainb.com/pergolas/</loc></url>
-  <url><loc>https://capitainb.com/pavers/</loc></url>
-  <url><loc>https://capitainb.com/artificial-turf/</loc></url>
-  <url><loc>https://capitainb.com/outdoor-kitchens/</loc></url>
-  <url><loc>https://capitainb.com/water-features/</loc></url>
-  <url><loc>https://capitainb.com/outdoor-renovations/</loc></url>
-  <url><loc>https://capitainb.com/privacy/</loc></url>
-  <url><loc>https://capitainb.com/terms/</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://capitainb.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/pt/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/pool-enclosures/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/pool-enclosures/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/pool-enclosures/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/pool-enclosures/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/pt/pool-enclosures/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/pool-enclosures/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/pool-enclosures/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/pool-enclosures/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/es/pool-enclosures/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/pool-enclosures/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/pool-enclosures/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/pool-enclosures/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/lanais/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/lanais/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/lanais/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/lanais/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/pt/lanais/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/lanais/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/lanais/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/lanais/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/es/lanais/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/lanais/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/lanais/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/lanais/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/pergolas/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/pergolas/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/pergolas/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/pergolas/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/pt/pergolas/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/pergolas/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/pergolas/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/pergolas/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/es/pergolas/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/pergolas/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/pergolas/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/pergolas/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/pavers/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/pavers/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/pavers/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/pavers/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/pt/pavers/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/pavers/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/pavers/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/pavers/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/es/pavers/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/pavers/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/pavers/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/pavers/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/artificial-turf/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/artificial-turf/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/artificial-turf/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/artificial-turf/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/pt/artificial-turf/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/artificial-turf/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/artificial-turf/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/artificial-turf/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/es/artificial-turf/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/artificial-turf/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/artificial-turf/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/artificial-turf/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/outdoor-kitchens/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/outdoor-kitchens/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/outdoor-kitchens/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/outdoor-kitchens/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/pt/outdoor-kitchens/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/outdoor-kitchens/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/outdoor-kitchens/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/outdoor-kitchens/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/es/outdoor-kitchens/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/outdoor-kitchens/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/outdoor-kitchens/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/outdoor-kitchens/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/water-features/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/water-features/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/water-features/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/water-features/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/pt/water-features/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/water-features/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/water-features/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/water-features/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/es/water-features/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/water-features/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/water-features/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/water-features/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/outdoor-renovations/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/outdoor-renovations/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/outdoor-renovations/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/outdoor-renovations/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/pt/outdoor-renovations/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/outdoor-renovations/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/outdoor-renovations/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/outdoor-renovations/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/es/outdoor-renovations/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/outdoor-renovations/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/outdoor-renovations/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/outdoor-renovations/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/privacy/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/pt/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/privacy/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/es/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/privacy/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/terms/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/pt/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/terms/"/>
+  </url>
+  <url>
+    <loc>https://capitainb.com/es/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://capitainb.com/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://capitainb.com/pt/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://capitainb.com/es/terms/"/>
+  </url>
 </urlset>

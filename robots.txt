@@ -1,5 +1,9 @@
 User-agent: *
 Disallow: /lp/
+Disallow: /pt/lp/
+Disallow: /es/lp/
 Disallow: /thank-you/
+Disallow: /pt/thank-you/
+Disallow: /es/thank-you/
 
 Sitemap: https://capitainb.com/sitemap.xml
