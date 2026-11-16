@@ -232,6 +232,42 @@
     dlg.addEventListener("close", function () { document.body.style.overflow = ""; if (opener) opener.focus(); });
   });
 
+  /* ---- job videos: play muted while on screen, pause off screen, button to pause/play ---- */
+  (function () {
+    var vids = document.querySelectorAll(".vid");
+    if (!vids.length) return;
+    var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    vids.forEach(function (fig) {
+      var v = fig.querySelector("video"), b = fig.querySelector(".vid__toggle");
+      var userPaused = reduce, visible = false;
+      function label() { var on = !v.paused; fig.dataset.playing = on ? "true" : "false"; b.setAttribute("aria-label", on ? b.dataset.labelPause : b.dataset.labelPlay); }
+      function sync() {
+        if (visible && !userPaused && !document.hidden) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+        else v.pause();
+      }
+      v.addEventListener("play", label); v.addEventListener("pause", label);
+      b.addEventListener("click", function () { userPaused = !v.paused; if (!userPaused) { visible = true; v.play(); track("video_play", { video: v.currentSrc.split("/").pop() }); } else v.pause(); });
+      document.addEventListener("visibilitychange", sync);
+      if ("IntersectionObserver" in window) new IntersectionObserver(function (e) { visible = e[0].isIntersecting; sync(); }, { threshold: 0.4 }).observe(fig);
+      label();
+    });
+  })();
+
+  /* ---- ad pages: headline matches the search keyword (?h1=Lanai). Whitelist only. ---- */
+  (function () {
+    var h = document.querySelector("h1[data-ad-kw]");
+    if (!h) return;
+    var q = new URLSearchParams(location.search);
+    var raw = q.get("h1") || q.get("kw");
+    if (!raw) return;
+    var map; try { map = JSON.parse(h.dataset.adKw); } catch (e) { return; }
+    var k = raw.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[+_\-]+/g, " ")
+      .replace(/\b(near me|in orlando|orlando|fl|florida|contractor|contractors|company|companies|builder|builders|installer|installers|installation|cost|em|en)\b/g, " ")
+      .replace(/\s+/g, " ").trim();
+    var hit = map[k] || map[k.replace(/s$/, "")];
+    if (hit) { h.textContent = hit; document.title = hit + " | Captain B LLC"; }
+  })();
+
   /* ---- WhatsApp click tracking ---- */
   document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function (a) {
     a.addEventListener("click", function () { track("click_whatsapp", { location: a.dataset.where || "page" }); });
