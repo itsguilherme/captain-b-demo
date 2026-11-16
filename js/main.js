@@ -214,6 +214,24 @@
     go(0);
   });
 
+  /* ---- recent projects: tap a photo to see it large ---- */
+  document.querySelectorAll("[data-lightbox]").forEach(function (dlg) {
+    var big = dlg.querySelector("[data-lightbox-img]"), cap = dlg.querySelector("[data-lightbox-cap]");
+    var opener = null;
+    if (typeof dlg.showModal !== "function") return; // very old browser: photos just stay as they are
+    dlg.closest("section").querySelectorAll("[data-zoom]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var fig = b.closest("figure"), small = b.querySelector("img");
+        opener = b; big.src = b.dataset.zoom; big.alt = small ? small.alt : "";
+        var fc = fig && fig.querySelector("figcaption"); var sp = fc && fc.querySelector("span"); cap.textContent = fc ? (fc.firstChild.textContent.trim() + (sp ? ", " + sp.textContent.trim() : "")) : "";
+        dlg.showModal(); document.body.style.overflow = "hidden";
+      });
+    });
+    dlg.querySelector("[data-lightbox-close]").addEventListener("click", function () { dlg.close(); });
+    dlg.addEventListener("click", function (e) { if (e.target === dlg || e.target.tagName === "FIGURE") dlg.close(); });
+    dlg.addEventListener("close", function () { document.body.style.overflow = ""; if (opener) opener.focus(); });
+  });
+
   /* ---- WhatsApp click tracking ---- */
   document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function (a) {
     a.addEventListener("click", function () { track("click_whatsapp", { location: a.dataset.where || "page" }); });
