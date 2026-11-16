@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Captain B LLC | Pool &amp; Screen Enclosures, Pavers | Orlando, FL</title>
 <meta name="description" content="Captain B LLC builds pool and screen enclosures, pavers, pergolas, lanais and outdoor kitchens in Orlando and Central Florida. Free estimates. Call (407) 881-7910.">
-<!-- DEMO: remove the next line when this goes live on capitainb.com -->
+<!-- DEMO: this whole site is noindex while it lives on the preview link. -->
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://capitainb.com/">
 <meta name="theme-color" content="#0B1D30">
@@ -13,13 +13,12 @@
 <meta property="og:title" content="Captain B LLC | Pool &amp; Screen Enclosures, Pavers | Orlando, FL">
 <meta property="og:description" content="Captain B LLC builds pool and screen enclosures, pavers, pergolas, lanais and outdoor kitchens in Orlando and Central Florida. Free estimates. Call (407) 881-7910.">
 <meta property="og:image" content="https://capitainb.com/assets/img/lake-enclosure-1600.webp">
-<meta property="og:url" content="https://capitainb.com/">
 <link rel="icon" type="image/png" sizes="48x48" href="assets/img/favicon-48.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" as="image" href="assets/img/lake-enclosure-1600.webp" imagesrcset="assets/img/lake-enclosure-640.webp 640w, assets/img/lake-enclosure-1024.webp 1024w, assets/img/lake-enclosure-1600.webp 1600w" imagesizes="100vw" fetchpriority="high">
-<link rel="stylesheet" href="css/styles.css?v=3">
+<link rel="stylesheet" href="css/styles.css?v=4">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -61,7 +60,7 @@
       "name": "Do you serve areas outside Orlando?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Captain B serves Orlando and the surrounding areas of Central Florida. Share your ZIP code and the team will confirm your area."
+        "text": "Captain B serves Orlando and the surrounding areas of Central Florida. Add your ZIP code to the form and the team will confirm your area."
       }
     },
     {
@@ -104,7 +103,7 @@
 <a class="skip" href="#main">Skip to content</a>
 <div class="topbar">
   <div class="container">
-    <span class="topbar__area">Serving Orlando and Central Florida · Free estimates</span>
+    <span>Serving Orlando and Central Florida · Free estimates</span>
     <a href="tel:+14078817910" data-where="topbar">Call (407) 881-7910</a>
   </div>
 </div>
@@ -112,8 +111,20 @@
   <div class="container">
     <a class="brand" href="./" aria-label="Captain B LLC, home"><img src="assets/img/logo.webp" alt="Captain B LLC" width="321" height="184"></a>
     <nav class="nav" aria-label="Main">
-      <a href="pool-enclosures/">Pool enclosures</a>
-      <a href="#services">Services</a>
+      <a href="./" aria-current="page">Home</a>
+      <div class="dd">
+        <button class="dd__btn" type="button" aria-expanded="false" aria-controls="dd-services">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="dd__menu" id="dd-services">
+          <a href="pool-enclosures/">Pool and screen enclosures</a>
+          <a href="lanais/">Custom lanais</a>
+          <a href="pergolas/">Pergolas and outdoor structures</a>
+          <a href="pavers/">Paver installation</a>
+          <a href="artificial-turf/">Artificial turf</a>
+          <a href="outdoor-kitchens/">Outdoor kitchens</a>
+          <a href="water-features/">Waterfalls and water features</a>
+          <a href="outdoor-renovations/">Outdoor living renovations</a>
+        </div>
+      </div>
       <a href="#why">Why us</a>
       <a href="#projects">Projects</a>
       <a href="#faq">FAQ</a>
@@ -131,8 +142,19 @@
     <button class="icon-btn" type="button" data-menu-close>Close</button>
   </div>
   <nav aria-label="Mobile">
-    <a href="pool-enclosures/">Pool enclosures</a>
-    <a href="#services">Services</a>
+    <a href="./">Home</a>
+    <details class="m-services"><summary>Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+      <div class="m-services__list">
+      <a href="pool-enclosures/">Pool and screen enclosures</a>
+      <a href="lanais/">Custom lanais</a>
+      <a href="pergolas/">Pergolas and outdoor structures</a>
+      <a href="pavers/">Paver installation</a>
+      <a href="artificial-turf/">Artificial turf</a>
+      <a href="outdoor-kitchens/">Outdoor kitchens</a>
+      <a href="water-features/">Waterfalls and water features</a>
+      <a href="outdoor-renovations/">Outdoor living renovations</a>
+      </div>
+    </details>
     <a href="#why">Why us</a>
     <a href="#projects">Projects</a>
     <a href="#faq">FAQ</a>
@@ -162,10 +184,10 @@
     <div class="estimate-card" id="estimate">
       <h2>Get your free estimate</h2>
       <p>Takes about a minute. Captain B will contact you about your project.</p>
-      <form class="form" id="estimate-form" action="thank-you/" method="post" data-form-name="home-estimate">
+      <form class="form" id="estimate-form" action="thank-you/" method="post" data-form-name="home">
         <div class="field" data-field="project_type">
           <label for="f-type">What are you planning?</label>
-          <select id="f-type" name="project_type" required><option value="">Choose a project</option><option value="enclosure">Pool or screen enclosure</option><option value="pavers">Pavers</option><option value="turf">Artificial turf</option><option value="lanai">Lanai</option><option value="pergola">Pergola or outdoor structure</option><option value="kitchen">Outdoor kitchen</option><option value="water">Waterfall or water feature</option><option value="other">Something else or not sure</option></select>
+          <select id="f-type" name="project_type" required><option value="">Choose a project</option><option value="enclosure">Pool and screen enclosures</option><option value="lanai">Custom lanais</option><option value="pergola">Pergolas and outdoor structures</option><option value="pavers">Paver installation</option><option value="turf">Artificial turf</option><option value="kitchen">Outdoor kitchens</option><option value="water">Waterfalls and water features</option><option value="renovation">Outdoor living renovations</option><option value="other">Something else or not sure</option></select>
           <p class="err">Choose the project type that fits best.</p>
         </div>
         <div class="form__two">
@@ -184,6 +206,7 @@
             <div class="field" data-field="details"><label for="f-details">Project details <span class="opt">(optional)</span></label><textarea id="f-details" name="details" rows="3"></textarea></div>
           </div>
         </details>
+        <input type="hidden" name="page" value="home">
         <button class="btn btn--brass" type="submit">Get my free estimate</button>
         <p class="form__fine" data-send-error hidden>Your request did not go through. Please call (407) 881-7910.</p>
         <p class="form__fine">We only use your details to reply about your project. <a href="privacy/">Privacy policy</a></p>
@@ -200,29 +223,43 @@
     </div>
     <div class="services">
       <a class="service reveal" style="--i:0" href="pool-enclosures/">
-        <img src="assets/img/pool-portrait-640.webp" width="640" height="544" loading="lazy" decoding="async" alt="Pool inside a screen enclosure">
-        <div class="service__body"><h3>Pool and screen enclosures</h3><p>Custom-built enclosures that make your pool and patio more protected, comfortable and usable.</p><span class="service__link">See pool enclosures <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <img src="assets/img/pool-portrait-640.webp" srcset="assets/img/pool-portrait-640.webp 640w" sizes="(max-width:560px) 100vw, (max-width:1024px) 50vw, 300px" width="640" height="544" loading="lazy" decoding="async" alt="Lakefront pool enclosure, a Captain B project">
+        <div class="service__body"><h3>Pool and screen enclosures</h3><p>Custom-built enclosures that make your pool and patio more protected, comfortable and usable.</p><span class="service__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       </a>
-      <a class="service reveal" style="--i:1" href="#estimate" data-type="pavers">
-        <img src="assets/img/turf-portrait-640.webp" width="640" height="544" loading="lazy" decoding="async" alt="New pavers and artificial turf inside a screen enclosure">
-        <div class="service__body"><h3>Pavers and turf</h3><p>Paver pool decks, patios and walkways, and artificial turf that stays green all year.</p><span class="service__link">Get a pavers estimate <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      <a class="service reveal" style="--i:1" href="pavers/">
+        <img src="assets/img/turf-portrait-640.webp" srcset="assets/img/turf-portrait-640.webp 640w" sizes="(max-width:560px) 100vw, (max-width:1024px) 50vw, 300px" width="640" height="544" loading="lazy" decoding="async" alt="Pavers and turf under screen, a Captain B project">
+        <div class="service__body"><h3>Paver installation</h3><p>Paver pool decks, patios and walkways with a clean, finished look.</p><span class="service__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       </a>
-      <a class="service reveal" style="--i:2" href="#estimate" data-type="lanai">
-        <img src="assets/img/balcony-portrait-640.webp" width="640" height="544" loading="lazy" decoding="async" alt="Screened second-floor lanai looking out over a lake">
-        <div class="service__body"><h3>Lanais and pergolas</h3><p>Lanais, pergolas and outdoor structures that add shade and new places to gather.</p><span class="service__link">Get a lanai estimate <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      <a class="service reveal" style="--i:2" href="lanais/">
+        <img src="assets/img/balcony-portrait-640.webp" srcset="assets/img/balcony-portrait-640.webp 640w" sizes="(max-width:560px) 100vw, (max-width:1024px) 50vw, 300px" width="640" height="544" loading="lazy" decoding="async" alt="Second-floor screened lanai, a Captain B project">
+        <div class="service__body"><h3>Custom lanais</h3><p>Lanais designed to match your home and give you more room to live outside.</p><span class="service__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       </a>
-      <a class="service reveal" style="--i:3" href="#estimate" data-type="kitchen">
-        <img src="assets/img/kitchen-portrait-640.webp" width="640" height="544" loading="lazy" decoding="async" alt="Outdoor kitchen with stainless cabinets under a covered lanai">
-        <div class="service__body"><h3>Outdoor kitchens</h3><p>Custom outdoor kitchens that make the backyard the place where you cook and host.</p><span class="service__link">Get a kitchen estimate <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      <a class="service reveal" style="--i:3" href="outdoor-kitchens/">
+        <img src="assets/img/kitchen-portrait-640.webp" srcset="assets/img/kitchen-portrait-640.webp 640w" sizes="(max-width:560px) 100vw, (max-width:1024px) 50vw, 300px" width="640" height="544" loading="lazy" decoding="async" alt="Outdoor kitchen, a Captain B project">
+        <div class="service__body"><h3>Outdoor kitchens</h3><p>Custom outdoor kitchens that make the backyard the place where you cook and host.</p><span class="service__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       </a>
     </div>
-    <p class="also reveal"><strong>Also:</strong> artificial turf, decorative waterfalls and water features, outdoor living renovations, and commercial outdoor projects.</p>
+    <div class="minis">
+      <a class="mini reveal" style="--i:0" href="pergolas/"><h3>Pergolas and outdoor structures</h3><p>Shade and new places to gather, custom-built for your yard.</p><span class="service__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="mini reveal" style="--i:1" href="artificial-turf/"><h3>Artificial turf</h3><p>A clean, green lawn that stays that way all year.</p><span class="service__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="mini reveal" style="--i:2" href="water-features/"><h3>Waterfalls and water features</h3><p>Waterfalls and water features that give your yard a focal point.</p><span class="service__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="mini reveal" style="--i:3" href="outdoor-renovations/"><h3>Outdoor living renovations</h3><p>Turn an outdated patio or pool area into a space you use every day.</p><span class="service__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    </div>
   </div>
 </section>
 
 <section class="section section--sand" id="why" aria-labelledby="why-title">
   <div class="container why">
-    <div class="why__photo reveal"><img src="assets/img/lake-tall-640.webp" srcset="assets/img/lake-tall-640.webp 640w" sizes="(max-width:960px) 100vw, 520px" width="640" height="810" loading="lazy" decoding="async" alt="A lake seen through a Captain B pool enclosure"></div>
+    <div class="why__photo reveal">
+      <div class="carousel" data-carousel aria-roledescription="carousel" aria-label="Captain B projects">
+        <img src="assets/img/why-1-640.webp" data-slide="0" data-active="true" width="640" height="800" loading="eager" decoding="async" alt="Pool enclosure facing a lake, a Captain B project">
+        <img src="assets/img/why-2-640.webp" data-slide="1" width="640" height="800" loading="lazy" decoding="async" alt="Pool inside a screen enclosure, a Captain B project">
+        <img src="assets/img/why-3-640.webp" data-slide="2" width="640" height="800" loading="lazy" decoding="async" alt="Outdoor kitchen under a covered lanai, a Captain B project">
+        <img src="assets/img/why-4-640.webp" data-slide="3" width="640" height="800" loading="lazy" decoding="async" alt="Full-yard enclosure over turf, a Captain B project">
+        <img src="assets/img/why-5-640.webp" data-slide="4" width="640" height="800" loading="lazy" decoding="async" alt="Screened second-floor lanai, a Captain B project">
+        <div class="carousel__dots"><button type="button" data-go="0" aria-label="Show photo 1 of 5" aria-current="true"></button><button type="button" data-go="1" aria-label="Show photo 2 of 5"></button><button type="button" data-go="2" aria-label="Show photo 3 of 5"></button><button type="button" data-go="3" aria-label="Show photo 4 of 5"></button><button type="button" data-go="4" aria-label="Show photo 5 of 5"></button></div>
+      </div>
+    </div>
     <div class="reveal" style="--i:1">
       <h2 id="why-title">Why homeowners choose Captain B</h2>
       <p class="why__intro">For more than a decade, Captain B has been turning Central Florida backyards into spaces people actually use.</p>
@@ -236,7 +273,6 @@
     </div>
   </div>
 </section>
-
 <section class="section section--navy on-dark" id="process" aria-labelledby="process-title">
   <div class="container">
     <div class="section-head reveal">
@@ -252,20 +288,19 @@
     <div class="btn-row btn-row--center"><a class="btn btn--brass" href="#estimate">Start with a free estimate</a></div>
   </div>
 </section>
-
 <section class="section" id="projects" aria-labelledby="projects-title">
   <div class="container">
     <div class="section-head reveal">
       <h2 id="projects-title">Recent projects</h2>
       <p>Photos from Captain B job sites around Central Florida.</p>
     </div>
-    <div class="projects">
-      <figure class="project reveal" style="--i:0"><div class="project__img"><img src="assets/img/lake-enclosure-1024.webp" srcset="assets/img/lake-enclosure-640.webp 640w, assets/img/lake-enclosure-1024.webp 1024w" sizes="(max-width:560px) 100vw, (max-width:960px) 50vw, 400px" width="1024" height="493" loading="lazy" decoding="async" alt="Lakefront pool enclosure, a Captain B project"></div><figcaption>Lakefront pool enclosure<span>Screen enclosure</span></figcaption></figure>
-      <figure class="project reveal" style="--i:1"><div class="project__img"><img src="assets/img/house-enclosure-1024.webp" srcset="assets/img/house-enclosure-640.webp 640w, assets/img/house-enclosure-1024.webp 1024w" sizes="(max-width:560px) 100vw, (max-width:960px) 50vw, 400px" width="1024" height="493" loading="lazy" decoding="async" alt="Full-yard enclosure, a Captain B project"></div><figcaption>Full-yard enclosure<span>Enclosure and turf</span></figcaption></figure>
-      <figure class="project reveal" style="--i:2"><div class="project__img"><img src="assets/img/balcony-enclosure-1024.webp" srcset="assets/img/balcony-enclosure-640.webp 640w, assets/img/balcony-enclosure-1024.webp 1024w" sizes="(max-width:560px) 100vw, (max-width:960px) 50vw, 400px" width="1024" height="493" loading="lazy" decoding="async" alt="Second-floor screened lanai, a Captain B project"></div><figcaption>Second-floor screened lanai<span>Lanai and enclosure</span></figcaption></figure>
-      <figure class="project reveal" style="--i:0"><div class="project__img"><img src="assets/img/outdoor-kitchen-1024.webp" srcset="assets/img/outdoor-kitchen-640.webp 640w, assets/img/outdoor-kitchen-1024.webp 1024w" sizes="(max-width:560px) 100vw, (max-width:960px) 50vw, 400px" width="1024" height="493" loading="lazy" decoding="async" alt="Outdoor kitchen, a Captain B project"></div><figcaption>Outdoor kitchen<span>Kitchen under a covered lanai</span></figcaption></figure>
-      <figure class="project reveal" style="--i:1"><div class="project__img"><img src="assets/img/turf-pavers-1024.webp" srcset="assets/img/turf-pavers-640.webp 640w, assets/img/turf-pavers-1024.webp 1024w" sizes="(max-width:560px) 100vw, (max-width:960px) 50vw, 400px" width="1024" height="493" loading="lazy" decoding="async" alt="Pavers and turf under screen, a Captain B project"></div><figcaption>Pavers and turf under screen<span>Pavers and turf</span></figcaption></figure>
-      <figure class="project reveal" style="--i:2"><div class="project__img"><img src="assets/img/pool-enclosure-1024.webp" srcset="assets/img/pool-enclosure-640.webp 640w, assets/img/pool-enclosure-1024.webp 1024w" sizes="(max-width:560px) 100vw, (max-width:960px) 50vw, 400px" width="1024" height="493" loading="lazy" decoding="async" alt="Pool enclosure under the oaks, a Captain B project"></div><figcaption>Pool enclosure under the oaks<span>Pool enclosure</span></figcaption></figure>
+    <div class="projects projects--3">
+      <figure class="project reveal" style="--i:0"><div class="project__img"><img src="assets/img/lake-enclosure-1600.webp" srcset="assets/img/lake-enclosure-640.webp 640w, assets/img/lake-enclosure-1024.webp 1024w, assets/img/lake-enclosure-1600.webp 1600w" sizes="(max-width:560px) 100vw, (max-width:960px) 50vw, 400px" width="1600" height="771" loading="lazy" decoding="async" alt="Lakefront pool enclosure, a Captain B project"></div><figcaption>Lakefront pool enclosure<span>Screen enclosure</span></figcaption></figure>
+      <figure class="project reveal" style="--i:1"><div class="project__img"><img src="assets/img/house-enclosure-1600.webp" srcset="assets/img/house-enclosure-640.webp 640w, assets/img/house-enclosure-1024.webp 1024w, assets/img/house-enclosure-1600.webp 1600w" sizes="(max-width:560px) 100vw, (max-width:960px) 50vw, 400px" width="1600" height="771" loading="lazy" decoding="async" alt="Full-yard enclosure, a Captain B project"></div><figcaption>Full-yard enclosure<span>Enclosure and turf</span></figcaption></figure>
+      <figure class="project reveal" style="--i:2"><div class="project__img"><img src="assets/img/balcony-enclosure-1600.webp" srcset="assets/img/balcony-enclosure-640.webp 640w, assets/img/balcony-enclosure-1024.webp 1024w, assets/img/balcony-enclosure-1600.webp 1600w" sizes="(max-width:560px) 100vw, (max-width:960px) 50vw, 400px" width="1600" height="771" loading="lazy" decoding="async" alt="Second-floor screened lanai, a Captain B project"></div><figcaption>Second-floor screened lanai<span>Lanai and enclosure</span></figcaption></figure>
+      <figure class="project reveal" style="--i:0"><div class="project__img"><img src="assets/img/outdoor-kitchen-1600.webp" srcset="assets/img/outdoor-kitchen-640.webp 640w, assets/img/outdoor-kitchen-1024.webp 1024w, assets/img/outdoor-kitchen-1600.webp 1600w" sizes="(max-width:560px) 100vw, (max-width:960px) 50vw, 400px" width="1600" height="771" loading="lazy" decoding="async" alt="Outdoor kitchen, a Captain B project"></div><figcaption>Outdoor kitchen<span>Kitchen under a covered lanai</span></figcaption></figure>
+      <figure class="project reveal" style="--i:1"><div class="project__img"><img src="assets/img/turf-pavers-1600.webp" srcset="assets/img/turf-pavers-640.webp 640w, assets/img/turf-pavers-1024.webp 1024w, assets/img/turf-pavers-1600.webp 1600w" sizes="(max-width:560px) 100vw, (max-width:960px) 50vw, 400px" width="1600" height="771" loading="lazy" decoding="async" alt="Pavers and turf under screen, a Captain B project"></div><figcaption>Pavers and turf under screen<span>Pavers and turf</span></figcaption></figure>
+      <figure class="project reveal" style="--i:2"><div class="project__img"><img src="assets/img/pool-enclosure-1600.webp" srcset="assets/img/pool-enclosure-640.webp 640w, assets/img/pool-enclosure-1024.webp 1024w, assets/img/pool-enclosure-1600.webp 1600w" sizes="(max-width:560px) 100vw, (max-width:960px) 50vw, 400px" width="1600" height="771" loading="lazy" decoding="async" alt="Pool enclosure under the oaks, a Captain B project"></div><figcaption>Pool enclosure under the oaks<span>Pool enclosure</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -293,13 +328,15 @@
       <p class="faq__intro">Quick answers about Captain B and how a project works.</p>
       <div class="ask on-dark">
         <strong>Still have a question?</strong>
-        <p>Call and talk it through. The estimate is free.</p>
-        <a class="btn btn--brass" href="tel:+14078817910" data-where="faq"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg> Call (407) 881-7910</a>
+        <p>Call, or send a WhatsApp message. The estimate is free.</p>
+        <div class="btn-row">
+          <a class="btn btn--brass" href="tel:+14078817910" data-where="faq"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg> Call (407) 881-7910</a>
+        </div>
       </div>
     </div>
     <div class="faq__list reveal" style="--i:1">
         <details><summary>What types of projects does Captain B handle?</summary><p>Screen and pool enclosures, custom lanais, pergolas and outdoor structures, paver installation, artificial turf, custom outdoor kitchens, decorative waterfalls and water features, and outdoor living renovations, for homes and commercial properties.</p></details>
-        <details><summary>Do you serve areas outside Orlando?</summary><p>Yes. Captain B serves Orlando and the surrounding areas of Central Florida. Share your ZIP code and the team will confirm your area.</p></details>
+        <details><summary>Do you serve areas outside Orlando?</summary><p>Captain B serves Orlando and the surrounding areas of Central Florida. Add your ZIP code to the form and the team will confirm your area.</p></details>
         <details><summary>Can my project be customized?</summary><p>Yes. Every property has different dimensions, needs and goals, so each project is planned around your space and what you want from it.</p></details>
         <details><summary>Can I combine several services in one project?</summary><p>Yes. Enclosures, pavers, pergolas, outdoor kitchens, turf and other elements can be planned together as one outdoor project.</p></details>
         <details><summary>Do you handle commercial projects?</summary><p>Yes. Captain B works on residential and commercial outdoor projects.</p></details>
@@ -326,29 +363,27 @@
       <div>
         <img src="assets/img/logo.webp" width="321" height="184" loading="lazy" alt="Captain B LLC">
         <p>Outdoor construction in Orlando and Central Florida.</p>
+        <p class="foot__contact"><a href="tel:+14078817910" data-where="footer">(407) 881-7910</a></p>
       </div>
-      <div>
+      <div class="foot__services">
         <h2>Services</h2>
-        <ul><li><a href="pool-enclosures/">Pool and screen enclosures</a></li><li><a href="#services">Pavers and turf</a></li><li><a href="#services">Lanais and pergolas</a></li><li><a href="#services">Outdoor kitchens</a></li></ul>
+        <ul><li><a href="pool-enclosures/">Pool and screen enclosures</a></li><li><a href="lanais/">Lanais</a></li><li><a href="pergolas/">Pergolas</a></li><li><a href="pavers/">Pavers</a></li><li><a href="artificial-turf/">Artificial turf</a></li><li><a href="outdoor-kitchens/">Outdoor kitchens</a></li><li><a href="water-features/">Water features</a></li><li><a href="outdoor-renovations/">Renovations</a></li></ul>
       </div>
       <div>
         <h2>Company</h2>
-        <ul><li><a href="#why">Why Captain B</a></li><li><a href="#process">How it works</a></li><li><a href="#projects">Projects</a></li><li><a href="#faq">FAQ</a></li></ul>
-      </div>
-      <div>
-        <h2>Contact</h2>
-        <ul><li><a href="tel:+14078817910" data-where="footer">(407) 881-7910</a></li><li><a href="#estimate">Get a free estimate</a></li><li>Orlando and Central Florida</li></ul>
+        <ul><li><a href="./">Home</a></li><li><a href="#why">Why Captain B</a></li><li><a href="#process">How it works</a></li><li><a href="#projects">Projects</a></li><li><a href="#faq">FAQ</a></li></ul>
       </div>
     </div>
     <div class="legal"><span>© <span data-year>2026</span> Captain B LLC. All rights reserved.</span><nav aria-label="Legal"><a href="privacy/">Privacy policy</a><a href="terms/">Terms of use</a></nav></div>
   </div>
 </footer>
+<a class="wa-float" href="https://wa.me/14078817910?text=Hi%20Captain%20B%2C%20I%20found%20you%20on%20your%20website%20and%20I%27d%20like%20a%20free%20estimate." target="_blank" rel="noopener" data-where="whatsapp-float" aria-label="Message Captain B on WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.7 7.1L4 20l1.4-4.1A8 8 0 1 1 20 11.5z"/><path d="M9 9.5c0 2.5 2 4.5 4.5 4.5l1-1.2 1.8.8-.3 1.4"/></svg><span>WhatsApp</span></a>
 
 <div class="action-bar" data-show="false">
   <a class="btn" href="tel:+14078817910" data-where="sticky-bar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg> Call now</a>
   <a class="btn btn--brass" href="#estimate">Free estimate</a>
 </div>
 
-<script src="js/main.js?v=3" defer></script>
+<script src="js/main.js?v=4" defer></script>
 </body>
 </html>

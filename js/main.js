@@ -53,7 +53,7 @@
   var est = document.getElementById("estimate");
   if (bar && "IntersectionObserver" in window) {
     var pastHero = false, formVisible = false;
-    function syncBar() { bar.dataset.show = pastHero && !formVisible ? "true" : "false"; }
+    function syncBar() { var on = pastHero && !formVisible; bar.dataset.show = on ? "true" : "false"; document.body.dataset.bar = on ? "true" : "false"; }
     if (hero) new IntersectionObserver(function (e) { pastHero = !e[0].isIntersecting; syncBar(); }, { threshold: 0.05 }).observe(hero);
     var card = est;
     if (card) new IntersectionObserver(function (e) { formVisible = e[0].isIntersecting; syncBar(); }, { threshold: 0.15 }).observe(card);
@@ -142,6 +142,54 @@
         });
     });
   }
+
+
+  /* ---- header shadow once the page scrolls ---- */
+  var header = document.querySelector(".site-header");
+  if (header) {
+    var onScroll = function () { header.dataset.scrolled = window.scrollY > 8 ? "true" : "false"; };
+    window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
+  }
+
+  /* ---- services dropdown (hover on desktop, click/keyboard everywhere) ---- */
+  document.querySelectorAll(".dd").forEach(function (dd) {
+    var btn = dd.querySelector(".dd__btn");
+    var closeT;
+    function set(open) { dd.dataset.open = open ? "true" : "false"; btn.setAttribute("aria-expanded", open ? "true" : "false"); }
+    btn.addEventListener("click", function () { set(dd.dataset.open !== "true"); });
+    if (matchMedia("(hover: hover) and (pointer: fine)").matches) {
+      dd.addEventListener("mouseenter", function () { clearTimeout(closeT); set(true); });
+      dd.addEventListener("mouseleave", function () { closeT = setTimeout(function () { set(false); }, 160); });
+    }
+    dd.addEventListener("keydown", function (e) { if (e.key === "Escape") { set(false); btn.focus(); } });
+    document.addEventListener("click", function (e) { if (!dd.contains(e.target)) set(false); });
+    dd.addEventListener("focusout", function (e) { if (!dd.contains(e.relatedTarget)) set(false); });
+  });
+
+  /* ---- auto carousel ---- */
+  document.querySelectorAll("[data-carousel]").forEach(function (c) {
+    var slides = c.querySelectorAll("img[data-slide]");
+    var dots = c.querySelectorAll("[data-go]");
+    var i = 0, timer = null;
+    var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    function go(n) {
+      i = (n + slides.length) % slides.length;
+      slides.forEach(function (s, k) { s.dataset.active = k === i ? "true" : "false"; if (k === (i + 1) % slides.length) s.loading = "eager"; });
+      dots.forEach(function (d, k) { if (k === i) d.setAttribute("aria-current", "true"); else d.removeAttribute("aria-current"); });
+    }
+    function start() { if (!reduce && !timer) timer = setInterval(function () { go(i + 1); }, 4200); }
+    function stop() { clearInterval(timer); timer = null; }
+    dots.forEach(function (d) { d.addEventListener("click", function () { stop(); go(+d.dataset.go); start(); }); });
+    c.addEventListener("mouseenter", stop); c.addEventListener("mouseleave", start);
+    c.addEventListener("focusin", stop); c.addEventListener("focusout", start);
+    document.addEventListener("visibilitychange", function () { if (document.hidden) stop(); else start(); });
+    start();
+  });
+
+  /* ---- WhatsApp click tracking ---- */
+  document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function (a) {
+    a.addEventListener("click", function () { track("click_whatsapp", { location: a.dataset.where || "page" }); });
+  });
 
   /* ---- call tracking hook ---- */
   document.querySelectorAll('a[href^="tel:"]').forEach(function (a) {
