@@ -49,13 +49,13 @@
 
   /* ---- mobile action bar: show after the hero, hide over the form ---- */
   var bar = document.querySelector(".action-bar");
-  var hero = document.querySelector(".hero, .plain-head");
+  var hero = document.querySelector(".hero, .page-top");
   var est = document.getElementById("estimate");
   if (bar && "IntersectionObserver" in window) {
     var pastHero = false, formVisible = false;
     function syncBar() { bar.dataset.show = pastHero && !formVisible ? "true" : "false"; }
     if (hero) new IntersectionObserver(function (e) { pastHero = !e[0].isIntersecting; syncBar(); }, { threshold: 0.05 }).observe(hero);
-    var card = est && est.querySelector(".estimate__card");
+    var card = est;
     if (card) new IntersectionObserver(function (e) { formVisible = e[0].isIntersecting; syncBar(); }, { threshold: 0.15 }).observe(card);
   }
 
@@ -80,30 +80,14 @@
     sync();
   });
 
-  /* ---- the live thing: project type picks the photo behind the form ---- */
+  /* ---- service links preselect the project type in the estimate form ---- */
   var form = document.getElementById("estimate-form");
-  var photos = document.querySelectorAll("[data-photo-for]");
-  var caption = document.querySelector("[data-photo-caption]");
-  function showType(type) {
-    if (!photos.length) return;
-    var match = null;
-    photos.forEach(function (img) { if (img.dataset.photoFor === type) match = img; });
-    if (!match) match = photos[0];
-    photos.forEach(function (img) { img.dataset.active = img === match ? "true" : "false"; });
-    if (caption && match.dataset.caption) caption.textContent = match.dataset.caption;
-  }
   function selectType(type) {
     if (!form) return;
-    var input = form.querySelector('input[name="project_type"][value="' + type + '"]');
-    if (input) { input.checked = true; showType(type); }
+    var sel = form.querySelector('select[name="project_type"]');
+    if (sel && sel.querySelector('option[value="' + type + '"]')) { sel.value = type; clearErr(form.querySelector('[data-field="project_type"]')); }
   }
   if (form) {
-    form.querySelectorAll('input[name="project_type"]').forEach(function (r) {
-      r.addEventListener("change", function () { showType(r.value); clearErr(form.querySelector('[data-field="project_type"]')); });
-    });
-    var checked = form.querySelector('input[name="project_type"]:checked');
-    if (checked) showType(checked.value);
-    // links like <a data-type="pavers" href="#estimate"> preselect the project type
     document.querySelectorAll("a[data-type]").forEach(function (a) {
       a.addEventListener("click", function () { selectType(a.dataset.type); track("estimate_cta_click", { project_type: a.dataset.type }); });
     });
