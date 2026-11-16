@@ -380,7 +380,7 @@ p { margin: 0; text-wrap: pretty; }
 .carousel__pause svg { width: 16px; height: 16px; }
 .carousel__pause .i-play, .carousel[data-paused="true"] .carousel__pause .i-pause { display: none; }
 .carousel[data-paused="true"] .carousel__pause .i-play { display: block; }
-.carousel__thumbs { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
+.carousel__thumbs { display: grid; grid-template-columns: repeat(8, 1fr); gap: 6px; }
 .carousel__thumb { position: relative; padding: 0; border: 0; border-radius: 6px; overflow: hidden; cursor: pointer; background: var(--navy); aspect-ratio: 16 / 9; opacity: 0.55; transition: opacity 200ms ease; }
 .carousel__thumb:hover { opacity: 0.85; }
 .carousel__thumb[aria-current="true"] { opacity: 1; }
@@ -483,7 +483,8 @@ p { margin: 0; text-wrap: pretty; }
 
 /* ---------- v8: real job videos ---------- */
 .vids { display: grid; gap: 20px; justify-content: center; grid-template-columns: repeat(var(--n, 3), minmax(0, 320px)); }
-.vids--1 { --n: 1; } .vids--2 { --n: 2; } .vids--3 { --n: 3; }
+.vids--1 { --n: 1; } .vids--2 { --n: 2; } .vids--3 { --n: 3; } .vids--4 { --n: 4; }
+@media (max-width: 1100px) and (min-width: 761px) { .vids--4 { --n: 2; } }
 .vid { margin: 0; }
 .vid__frame { position: relative; aspect-ratio: 9 / 16; border-radius: var(--radius); overflow: hidden; background: var(--navy); }
 .vid video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
